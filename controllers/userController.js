@@ -8,6 +8,7 @@ const User = require("../models/userModel");
 
 exports.registration = async (req, res) => {
   const user = req.body;
+
   const takenUsername = await User.findOne({ username: user.username });
   const takenEmail = await User.findOne({ email: user.email });
 
@@ -31,7 +32,29 @@ exports.registration = async (req, res) => {
 exports.login = async (req, res) => {
   const userLoggingIn = req.body;
 
+  
+  
   const dbUser = await User.findOne({ email: userLoggingIn.email });
+
+  if (!dbUser) {
+    return res.status(400).json({
+      message: "Email not recognized.",
+    });
+  }
+  else{
+    const payload = {
+      _id: dbUser._id,
+      username: dbUser.username,
+      email: dbUser.email,
+    };
+    return res.status(200).cookie("token", "token", { httpOnly: true }).json({
+      message: "User login successful.",
+      user: payload,
+    });
+  }
+
+
+/*
   if (!dbUser) {
     return res.status(400).json({
       message: "Username not recognized.",
@@ -64,8 +87,9 @@ exports.login = async (req, res) => {
     return res.status(401).json({
       message: "Invalid username or password.",
     });
-  }
+  }*/
 };
+
 
 exports.userAuth = async (req, res, next) => {
   const token = req.cookies.token;

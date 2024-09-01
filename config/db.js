@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const fs = require("fs");
 const Pet = require("../models/petModel");
 dotenv.config({ path: `${__dirname}/config.env` });
-
+const User = require("../models/userModel");
 const db = "mongodb://localhost:27017";
 
 const connectDB = async () => {
@@ -16,6 +16,9 @@ const connectDB = async () => {
       fs.readFileSync(`${__dirname}/sample-data.json`, "utf-8")
     );
 
+    await User.deleteMany();
+    console.log("User Data successfully deleted");
+
     await Pet.deleteMany();
     console.log("Data successfully deleted");
 
@@ -26,6 +29,7 @@ const connectDB = async () => {
     console.error(err.message);
     process.exit(1);
   }
+  
 };
 
 module.exports = connectDB;

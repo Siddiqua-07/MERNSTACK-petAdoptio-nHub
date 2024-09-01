@@ -85,7 +85,7 @@ export const SearchBar = ({
               type="button"
               className={`inline-flex w-2/5 h-12 min-w-min lg:m-2 lg:w-1/6 items-center justify-center content-center px-0 py-0  text-sm font-medium rounded-lg text-gray-900 border border-gray-200 hover:bg-slate-400 
               ${
-                styleByQuery("species", "dog")
+                styleByQuery("species", "bird")
                   ? "bg-slate-700 text-white hover:bg-slate-600"
                   : "bg-slate-100 text-black hover:bg-slate-200"
               }`}

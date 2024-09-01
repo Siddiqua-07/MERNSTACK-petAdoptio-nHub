@@ -30,6 +30,7 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Pet.deleteMany();
+    await Pet.deleteMany();
     console.log("Data successfully deleted");
     process.exit();
   } catch (error) {

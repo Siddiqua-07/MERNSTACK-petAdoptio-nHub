@@ -114,7 +114,7 @@ export const Navbar = () => {
                 <NavLink
                   onClick={() => setNavbarOpen(false)}
                   className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=rat"
+                  to="pets/?species=bird"
                 >
                   <span className="ml-2">Birds</span>
                 </NavLink>
