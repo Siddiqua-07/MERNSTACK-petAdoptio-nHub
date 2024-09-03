@@ -646,5 +646,113 @@
     "town": "Tripura,",
     "description": "Great at fetch, loves going on hikes",
     "image": "d9.jpg"
+  },
+  {
+    "name": "Pandora",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 900,
+    "town": "Bangalore,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "4.webp"
+  },
+  {
+    "name": "Pascal",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "female",
+    "zip": 48042,
+    "fee": 4500,
+    "town": "Goa,",
+    "description": "Great at singing, loves going on flights",
+    "image": "bird2.jpg"
+  },
+  {
+    "name": "Lora",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 1200,
+    "town": "Mumbai,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "bird3.jpeg"
+  },
+  {
+    "name": "Alexa",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "female",
+    "zip": 48042,
+    "fee": 300,
+    "town": "Assam,",
+    "description": "Great at singing, loves going to roam",
+    "image": "bird4.jpg"
+  },
+  {
+    "name": "Sinatra",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 500,
+    "town": "Delhi,",
+    "description": "Loves Nuts!",
+    "image": "bird5.webp"
+  },
+  {
+    "name": "Trixie",
+    "dateAddedToSite": "2022-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "female",
+    "zip": 48042,
+    "fee": 1200,
+    "town": "Bangalore,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "bird7.webp"
+  },
+  {
+    "name": "FlyBye",
+    "dateAddedToSite": "2023-01-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 4200,
+    "town": "Tripura,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "bird8.jpg"
+  },
+  {
+    "name": "Hoot",
+    "dateAddedToSite": "2023-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 3500,
+    "town": "Tripura,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "bird9.avif"
+  },
+  {
+    "name": "Jack",
+    "dateAddedToSite": "2023-12-29T00:00:00.000",
+    "species": "birds",
+    "age": 7,
+    "gender": "male",
+    "zip": 48042,
+    "fee": 3500,
+    "town": "Kochi,",
+    "description": "Great at fetch, loves going on hikes",
+    "image": "bird10.jpg"
   }
 ]
