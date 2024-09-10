@@ -53,7 +53,7 @@ export const Navbar = () => {
                   className="px-2 py-2 flex items-center text-s  leading-snug text-white hover:no-underline"
                   to={"/about"}
                 >
-                  <span className="ml-2">About the App</span>
+                  <span className="ml-2">Home</span>
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -62,10 +62,19 @@ export const Navbar = () => {
                   className="px-2 py-2 flex items-center text-s  font-bold leading-snug text-white hover:no-underline"
                   to={"pets/"}
                 >
-                  <span className="ml-2">See All Pets</span>
+                  <span className="ml-2">Find a Pet</span>
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink
+                  onClick={() => setNavbarOpen(false)}
+                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
+                  to="/petAdvice"
+                >
+                  <span className="ml-2">Adoption Advice</span>
+                </NavLink>
+              </li>
+            {/*  <li className="nav-item">
                 <NavLink
                   onClick={() => setNavbarOpen(false)}
                   className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
@@ -116,11 +125,11 @@ export const Navbar = () => {
                   className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
                   to="pets/?species=birds"
                 >
-                  <span className="ml-2">Birds</span>
+               <span className="ml-2">Birds</span>
                 </NavLink>
-              </li>
+              </li>*/}
 
-              <li className="nav-item">
+              <li className="nav-item buttonNew">
                 {user ? (
                   <NavLink
                     onClick={() => setNavbarOpen(false)}
@@ -139,10 +148,10 @@ export const Navbar = () => {
                   </NavLink>
                 )}
               </li>
-              <li className="nav-item">
+              <li className="nav-item buttonSignup">
                 {user ? (
                   <NavLink
-                    className="px-2 py-2 flex items-center text-s leading-snug text-white hover:no-underline"
+                    className="px-2 py-2 flex items-center text-s leading-snug text-black hover:no-underline"
                     onClick={logout}
                     to="/"
                   >
@@ -151,10 +160,10 @@ export const Navbar = () => {
                 ) : (
                   <NavLink
                     onClick={() => setNavbarOpen(false)}
-                    className="px-2 py-2 flex items-center text-s leading-snug text-white hover:opacity-110"
+                    className="px-2 py-2 flex items-center text-s leading-snug text-black hover:opacity-110"
                     to="users/register"
                   >
-                    <span className="ml-2">Register</span>
+                    <span className="ml-2">Sign Up</span>
                   </NavLink>
                 )}
               </li>

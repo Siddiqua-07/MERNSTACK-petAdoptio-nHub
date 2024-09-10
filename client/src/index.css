@@ -2925,3 +2925,54 @@ opacity: 77%;
   margin-left: -50vw;
   margin-right: -50vw;
 }
+
+.buttonNew {
+  background-color: black;
+  border: 2px solid #3498db; /* Optional border color */
+  color: #3498db; /* Text color */
+  padding: 2px;
+  padding-right: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttonNew:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.button-containerNew {
+  display: flex;
+  justify-content: center;
+ }
+
+ .buttonSignup {
+  background-color: white;
+  border: 2px solid #3498db; /* Optional border color */
+  color: black; /* Text color */
+  padding: 2px;
+  padding-right: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration-color: black;
+
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttonSignup:hover {
+  background-color: #3498db;
+  color: black; /* Text color on hover remains black */
+}
+
+.button-containerSignup {
+  display: flex;
+  justify-content: center;
+}
