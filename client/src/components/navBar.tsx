@@ -1,13 +1,30 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import CartContext from "../context/cartContext/cartContext";
 import useAuth from "../context/userContext/useAuth";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   const location = useLocation();
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const { cartItems } = useContext(CartContext);
   const { user, message, logout } = useAuth();
+  const dropdownRef = useRef<HTMLLIElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && event.target instanceof Node && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
     <>
@@ -74,61 +91,24 @@ export const Navbar = () => {
                   <span className="ml-2">Adoption Advice</span>
                 </NavLink>
               </li>
-            {/*  <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
+              <li className="nav-item relative" ref={dropdownRef}>
+                <button
+                  onClick={toggleDropdown}
                   className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=cat"
                 >
-                  <span className="ml-2">Cats</span>
-                </NavLink>
+                  <span className="ml-2">Resources</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                    <NavLink to="/training" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(false)}>Training Tips</NavLink>
+                    <NavLink to="/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(false)}>Pet Nutrition</NavLink>
+                    <NavLink to="/health" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(false)}>Health Guide</NavLink>
+                  </div>
+                )}
               </li>
-              <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
-                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=dog"
-                >
-                  <span className="ml-2">Dogs</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
-                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=bunny"
-                >
-                  <span className="ml-2">Bunnies</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
-                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=chicken"
-                >
-                  <span className="ml-2">Chickens</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
-                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=rat"
-                >
-                  <span className="ml-2">Rats</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  onClick={() => setNavbarOpen(false)}
-                  className="px-2 py-2 flex items-center text-s font-bold leading-snug text-white hover:no-underline"
-                  to="pets/?species=birds"
-                >
-               <span className="ml-2">Birds</span>
-                </NavLink>
-              </li>*/}
-
               <li className="nav-item buttonNew">
                 {user ? (
                   <NavLink
@@ -197,7 +177,6 @@ export const Navbar = () => {
                 </NavLink>
               </li>
             </ul>
-
           </div>
         </div>
       </nav>

@@ -17,6 +17,9 @@ import { CartPage } from "./components/checkout/cartPage";
 import { CheckoutPage } from "./components/checkout/checkoutPage";
 import { About } from "./components/about";
 import { PetAdvice } from "./components/petAdvice";
+import { TrainingTips } from "./components/trainingTips";
+import { Nutrition } from "./components/petNutrition";
+import { Health } from "./components/health";
 import { fetchPets as petsLoader, fetchPet as petLoader } from "./services/api";
 
 export const router = createBrowserRouter(
@@ -33,6 +36,9 @@ export const router = createBrowserRouter(
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/petAdvice" element={<PetAdvice />} />
+        <Route path="/training" element={<TrainingTips />} />
+        <Route path="/nutrition" element={<Nutrition />} />
+        <Route path="/health" element={<Health />} />
       </Route>
     </Route>
   )

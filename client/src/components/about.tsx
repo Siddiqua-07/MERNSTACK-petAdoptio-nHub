@@ -21,35 +21,44 @@ export const About = () => {
           Your browser does not support the video tag.
         </video>
       </div>
+      <div className="bg-white py-4"></div>
 
-      <section className="bg-pink-200 bg-opacity-75">
-      <div className="container mx-auto px-6 py-8">
-          <h1 className="font-medium text-center text-5xl my-2 text-slate-700">
-            Check out adoption advice
-          </h1>
-          <p className="text-xl text-center text-gray-600">
-            Wondering how (and why) you should adopt? Get the inside scoop.
-          </p>
+      <section className="bg-teal-500 text-white py-8 px-4">
+        <div className="container mx-auto flex flex-col md:flex-row">
+          <img
+            src="../../../uploads/getToKnow.png" // Replace this with your image URL
+            alt="Pet Adoption"
+            className="mb-4 w-full md:w-1/2 h-auto" // Adjusted width for responsiveness
+          />
+
+          <div className="w-full md:w-1/2 px-4">
+            <h1 className="font-medium text-center text-5xl my-2 text-slate-700">
+              Get to know us
+            </h1>
+
+            <p className=" my-4">
+              We know pet adoption, because we're adopters too. We think it's just
+              about the best thing you can do. But we'll be real: it can be a lengthy
+              (paperwork-filled) process.
+            </p>
+
+            <p className=" my-4">
+              So we're making it easier, with the tools, advice, and transparency you
+              need—from the first search through to daily life as a pet parent.
+            </p>
+
+            <p className=" my-4">
+              Because we'll do whatever it takes to help millions of people and pets
+              find each other.
+            </p>
+
+            <p className=" my-4">
+              Ready to find your pet? Let's do it.
+            </p>
+          </div>
         </div>
-
-        <div className=" container mx-auto flex flex-col md:flex-row gap-8 my-2 ">
-      <div className="w-full md:w-1/2 border p-4 rounded" style={{ borderColor: 'black' }}>
-        <h3 className="text-2xl font-semibold mb-4">Why we recommend adopting?
-        </h3>
-        <p className="text-gray-700">
-        There are so many reasons to adopt: meeting a unique pet, spending less, doing a good deed—but let’s talk facts. Millions of pets enter shelters every year. And hundreds of thousands are euthanized each year. We don’t tell you that to guilt you or be a downer, but that’s why adoption really matters to us. So we would love it if you considered adopting. And, since you're here, we’re guessing you are. Seriously, no judgment if you find a pet another way (every pet parent journey is different!). But we’re here to help make adoption easier, however we can. </p>
-      </div>
-      <div className="container w-full md:w-1/2  border p-4 rounded ml-4 ml:ml-0" style={{ borderColor: 'black' }}>
-        <h3 className="text-2xl font-semibold mb-4">How to find the perfect pet?
-        </h3>
-        <p className="text-gray-700">
-        Let’s bust a myth. The perfect pet? Doesn’t exist. Because there are so many pets that can be the right fit for you. It’s just about knowing what you’re looking for. So start by thinking about your criteria based on your lifestyle, breed preferences, living situation, (fur and human) family, etc. From there, our team can help match you with the right pet. Check out our New Pet Alerts too: with Alerts, we’ll email you newly added adoptable pets that fit your search—so you can check out matches and meet your next best friend faster.
-          </p>
-      </div>
-    </div>
-  
-  
       </section>
+
 
       <section className="">
         <div className="container px-6 py-12 h-full">
