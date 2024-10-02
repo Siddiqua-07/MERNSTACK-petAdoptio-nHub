@@ -2,6 +2,8 @@ import React, { useState, useContext, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import CartContext from "../context/cartContext/cartContext";
 import useAuth from "../context/userContext/useAuth";
+import { isAdmin } from '../utils/auth';
+import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   const location = useLocation();

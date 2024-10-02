@@ -14,9 +14,11 @@ export const Nutrition = () => {
       </div>
 
       <div className="content-wrapper">
-        <h1>Everything About Pet Nutrition</h1>
+      
         <p>Proper nutrition is vital to your pet's health and longevity. Here are key guidelines to ensure your pet is getting the best diet possible.</p>
-
+        <p>  </p>
+        <p> </p>
+        <p> </p>
         {/* Section 1 */}
         <div className="tip-section first-tip-section">
           <h2>1. Balanced Diet for Pets</h2>
@@ -31,7 +33,7 @@ export const Nutrition = () => {
             {/* Right: Image placeholder */}
             <div className="tip-image-wrapper">
               <img
-                src="path-to-your-image.jpg"
+                src="../../../uploads/diet.webp"
                 alt="Balanced Diet"
                 className="tip-image"
               />
@@ -47,7 +49,7 @@ export const Nutrition = () => {
             {/* Left: Image placeholder */}
             <div className="tip-image-wrapper">
               <img
-                src="path-to-your-image.jpg"
+                src="../../../uploads/schedule.jpg"
                 alt="Portion Control"
                 className="tip-image"
               />
@@ -76,7 +78,7 @@ export const Nutrition = () => {
             {/* Right: Image placeholder */}
             <div className="tip-image-wrapper">
               <img
-                src="path-to-your-image.jpg"
+                src="../../../uploads/freshWater.webp"
                 alt="Fresh Water"
                 className="tip-image"
               />
@@ -92,7 +94,7 @@ export const Nutrition = () => {
             {/* Left: Image placeholder */}
             <div className="tip-image-wrapper">
               <img
-                src="path-to-your-image.jpg"
+                src="../../../uploads/toxicFood.jpg"
                 alt="Toxic Foods"
                 className="tip-image"
               />

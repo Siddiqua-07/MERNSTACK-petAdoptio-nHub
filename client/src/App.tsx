@@ -3,7 +3,9 @@ import {
   RouterProvider,
   createRoutesFromElements,
   Route,
+  Navigate,
 } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
 import { RootLayout } from "./components/root";
 import { Homepage } from "./components/homepage";
 import { PetSearchPage } from "./components/petSearch/petSearchPage";
@@ -22,6 +24,14 @@ import { Nutrition } from "./components/petNutrition";
 import { Health } from "./components/health";
 import { fetchPets as petsLoader, fetchPet as petLoader } from "./services/api";
 
+import { AdminDashboard } from './components/AdminDashboard';
+import { isAdmin } from './utils/auth';
+
+import { AuthProvider } from './context/userContext/useAuth';
+
+
+import { getUser } from './services/api';
+
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<AuthLayout />} errorElement={<ErrorPage />}>
@@ -39,6 +49,7 @@ export const router = createBrowserRouter(
         <Route path="/training" element={<TrainingTips />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/health" element={<Health />} />
+\
       </Route>
     </Route>
   )
