@@ -29,8 +29,20 @@ import { isAdmin } from './utils/auth';
 
 import { AuthProvider } from './context/userContext/useAuth';
 
+import useAuth from './context/userContext/useAuth';
 
 import { getUser } from './services/api';
+
+
+const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { user } = useAuth();
+  
+  if (!user || !user.email) {
+    return <Navigate to="/users/login" replace />;
+  }
+  console.log(user.email)
+  return <>{children}</>;
+};
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,7 +61,14 @@ export const router = createBrowserRouter(
         <Route path="/training" element={<TrainingTips />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/health" element={<Health />} />
-\
+        <Route 
+          path="/admin-dashboard" 
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } 
+        />
       </Route>
     </Route>
   )

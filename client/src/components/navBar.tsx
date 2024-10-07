@@ -178,6 +178,17 @@ export const Navbar: React.FC = () => {
                   )}
                 </NavLink>
               </li>
+              {user && user.email && (
+              <li className="nav-item">
+                <NavLink
+                  onClick={() => setNavbarOpen(false)}
+                  className="px-2 py-2 flex items-center text-s leading-snug text-white hover:no-underline"
+                  to="/admin-dashboard"
+                >
+                  <span className="ml-2">Admin Dashboard</span>
+                </NavLink>
+              </li>
+            )}
             </ul>
           </div>
         </div>
