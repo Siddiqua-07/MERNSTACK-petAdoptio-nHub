@@ -178,7 +178,7 @@ export const Navbar: React.FC = () => {
                   )}
                 </NavLink>
               </li>
-              {user && user.email && (
+              {user && user.email === "siddnoor15@gmail.com" && (
               <li className="nav-item">
                 <NavLink
                   onClick={() => setNavbarOpen(false)}

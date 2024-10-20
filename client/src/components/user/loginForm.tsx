@@ -21,7 +21,7 @@ export const LoginFrom = () => {
 
       <section className="h-screen"
       style={{ 
-        backgroundImage: `url('/uploads/login-bg.jpeg')`, 
+        backgroundImage: `url('/uploads/loginN.jpg')`, 
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
@@ -52,7 +52,7 @@ export const LoginFrom = () => {
                 <div className="flex justify-between items-center mb-6">
                   <Link
                     to="/users/register "
-                    className="text-white-new hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
+                    className="text-black-new hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                   >
                     New to Pet Adoption Hub? Register for an account!
                   </Link>
